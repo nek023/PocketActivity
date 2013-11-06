@@ -60,6 +60,12 @@
     for (id activityItem in activityItems) {
         if ([activityItem isKindOfClass:[NSURL class]]) {
             self.URL = activityItem;
+            
+            // Delegate
+            if (self.delegate && [self.delegate respondsToSelector:@selector(pocketActivity:willStartSavingURL:)]) {
+                [self.delegate pocketActivity:self willStartSavingURL:self.URL];
+            }
+            
             return;
         }
     }

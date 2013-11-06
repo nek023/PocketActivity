@@ -13,6 +13,7 @@
 @protocol PocketActivityDelegate <NSObject>
 
 @optional
+- (void)pocketActivity:(PocketActivity *)pocketActivity willStartSavingURL:(NSURL *)url;
 - (void)pocketActivity:(PocketActivity *)pocketActivity didFinishSavingURL:(NSURL *)url;
 - (void)pocketActivity:(PocketActivity *)pocketActivity didFailToSaveURL:(NSURL *)url error:(NSError *)error;
 
