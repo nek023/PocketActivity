@@ -33,13 +33,6 @@
         imageName = [imageName stringByAppendingString:@"-iOS7"];
     }
     
-    // Check whether it runs on iPhone or iPad
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        imageName = [imageName stringByAppendingString:@"~iphone"];
-    } else {
-        imageName = [imageName stringByAppendingString:@"~ipad"];
-    }
-    
     return [UIImage imageNamed:imageName];
 }
 
